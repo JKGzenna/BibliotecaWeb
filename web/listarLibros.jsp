@@ -348,7 +348,7 @@
 					try{ace.settings.loadState('sidebar');}catch(e){}
 				</script>
 
-				<div class="sidebar-shortcuts" id="sidebar-shortcuts">
+<!--				<div class="sidebar-shortcuts" id="sidebar-shortcuts">
 					<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
 						<button class="btn btn-success">
 							<i class="ace-icon fa fa-signal"></i>
@@ -376,7 +376,7 @@
 
 						<span class="btn btn-danger"></span>
 					</div>
-				</div><!-- /.sidebar-shortcuts -->
+				</div> /.sidebar-shortcuts -->
 
 				<ul class="nav nav-list">
 					<li class="">

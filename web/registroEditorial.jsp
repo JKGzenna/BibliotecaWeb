@@ -378,7 +378,6 @@
 						<span class="btn btn-danger"></span>
 					</div>
 				</div><!-- /.sidebar-shortcuts -->
-                                <br><br>
 				<ul class="nav nav-list">
 					<li class="">
 						<a href="index.jsp">

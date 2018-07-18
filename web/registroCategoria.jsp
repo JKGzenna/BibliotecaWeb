@@ -348,7 +348,8 @@
 					try{ace.settings.loadState('sidebar');}catch(e){}
 				</script>
 
-				<div class="sidebar-shortcuts" id="sidebar-shortcuts">
+<!--                                    comento esto para quitar el menu de arriba
+                                        <div class="sidebar-shortcuts" id="sidebar-shortcuts">
 					<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
 						<button class="btn btn-success">
 							<i class="ace-icon fa fa-signal"></i>
@@ -376,7 +377,7 @@
 
 						<span class="btn btn-danger"></span>
 					</div>
-				</div><!-- /.sidebar-shortcuts -->
+				</div> /.sidebar-shortcuts -->
 
 				<ul class="nav nav-list">
 					<li class="">
@@ -444,7 +445,7 @@
 
 			<div class="main-content">
 				<div class="main-content-inner">
-					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
+<!--					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
 							<li>
 								<i class="ace-icon fa fa-home home-icon"></i>
@@ -452,7 +453,7 @@
 							</li>
 
 							
-						</ul><!-- /.breadcrumb -->
+						</ul> /.breadcrumb 
 
 						<div class="nav-search" id="nav-search">
 							<form class="form-search">
@@ -461,8 +462,8 @@
 									<i class="ace-icon fa fa-search nav-search-icon"></i>
 								</span>
 							</form>
-						</div><!-- /.nav-search -->
-					</div>
+						</div> /.nav-search 
+					</div>-->
 
 					<div class="page-content">
 						<div class="ace-settings-container" id="ace-settings-container">
