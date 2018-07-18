@@ -1,16 +1,21 @@
 <%-- 
-    Document   : ListarLibros
+    Document   : registroLibro
     Created on : 01-abr-2018, 17:32:12
     Author     : Juan Luis Goldaracena
 --%>
 
+<%@page import="dao.EditorialDAO"%>
+<%@page import="models.Editorial"%>
+<%@page import="dao.CategoriaDAO"%>
+<%@page import="models.Categoria"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title>Gestión de libros</title>
+                
+		<title>Registrar Libro</title>
 
 		<meta name="description" content="Juan Luis Goldaracena- TecaSoft" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -43,20 +48,20 @@
 				<div class="navbar-buttons navbar-header pull-right" role="navigation">
 					<ul class="nav ace-nav">
 						<li class="grey dropdown-modal">
-							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+<!--							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 								<i class="ace-icon fa fa-tasks"></i>
 								<span class="badge badge-grey">4</span>
-							</a>
+							</a>-->
 
 							<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
-								<li class="dropdown-header">
+<!--								<li class="dropdown-header">
 									<i class="ace-icon fa fa-check"></i>
 									4 Tasks to complete
-								</li>
+								</li>-->
 
 								<li class="dropdown-content">
 									<ul class="dropdown-menu dropdown-navbar">
-										<li>
+<!--										<li>
 											<a href="#">
 												<div class="clearfix">
 													<span class="pull-left">Software Update</span>
@@ -106,27 +111,27 @@
 													<div style="width:90%" class="progress-bar progress-bar-success"></div>
 												</div>
 											</a>
-										</li>
+										</li>-->
 									</ul>
 								</li>
 
 								<li class="dropdown-footer">
-									<a href="#">
+<!--									<a href="#">
 										See tasks with details
 										<i class="ace-icon fa fa-arrow-right"></i>
-									</a>
+									</a>-->
 								</li>
 							</ul>
 						</li>
 
 						<li class="purple dropdown-modal">
-							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+<!--							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 								<i class="ace-icon fa fa-bell icon-animated-bell"></i>
 								<span class="badge badge-important">8</span>
-							</a>
+							</a>-->
 
 							<ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
-								<li class="dropdown-header">
+<!--								<li class="dropdown-header">
 									<i class="ace-icon fa fa-exclamation-triangle"></i>
 									8 Notifications
 								</li>
@@ -176,32 +181,32 @@
 											</a>
 										</li>
 									</ul>
-								</li>
+								</li>-->
 
-								<li class="dropdown-footer">
+<!--								<li class="dropdown-footer">
 									<a href="#">
 										See all notifications
 										<i class="ace-icon fa fa-arrow-right"></i>
 									</a>
-								</li>
+								</li>-->
 							</ul>
 						</li>
 
-						<li class="green dropdown-modal">
+<!--						<li class="green dropdown-modal">
 							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 								<i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
 								<span class="badge badge-success">5</span>
-							</a>
+							</a>-->
 
 							<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
-								<li class="dropdown-header">
+<!--								<li class="dropdown-header">
 									<i class="ace-icon fa fa-envelope-o"></i>
 									5 Messages
-								</li>
+								</li>-->
 
-								<li class="dropdown-content">
+<!--								<li class="dropdown-content">-->
 									<ul class="dropdown-menu dropdown-navbar">
-										<li>
+<!--										<li>
 											<a href="#" class="clearfix">
 												<img src="assets/images/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
 												<span class="msg-body">
@@ -284,24 +289,24 @@
 													</span>
 												</span>
 											</a>
-										</li>
+										</li>-->
 									</ul>
-								</li>
+<!--								</li>
 
 								<li class="dropdown-footer">
 									<a href="inbox.html">
 										Ver todos los mensajes
 										<i class="ace-icon fa fa-arrow-right"></i>
 									</a>
-								</li>
+								</li>-->
 							</ul>
-						</li>
+<!--						</li>-->
 
 						<li class="light-blue dropdown-modal">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="assets/images/avatars/user.jpg" alt="Jason's Photo" />
+								<img class="nav-user-photo" src="assets/images/avatars/user.jpg" alt="foto usuario" />
 								<span class="user-info">
-									<small>Bienvenido,</small>
+									<small>Bienvenido</small>
 									Juan Luis
 								</span>
 
@@ -317,7 +322,7 @@
 								</li>
 
 								<li>
-									<a href="profile.html">
+									<a href="#"><!--profile.jsp-->
 										<i class="ace-icon fa fa-user"></i>
 										Perfil
 									</a>
@@ -348,7 +353,7 @@
 					try{ace.settings.loadState('sidebar');}catch(e){}
 				</script>
 
-				<div class="sidebar-shortcuts" id="sidebar-shortcuts">
+				<!--<div class="sidebar-shortcuts" id="sidebar-shortcuts">
 					<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
 						<button class="btn btn-success">
 							<i class="ace-icon fa fa-signal"></i>
@@ -377,11 +382,11 @@
 						<span class="btn btn-danger"></span>
 					</div>
 				</div><!-- /.sidebar-shortcuts -->
-
+                                <br><br>
 				<ul class="nav nav-list">
 					<li class="">
 						<a href="index.jsp">
-							<i class="menu-icon fa fa-tachometer"></i>
+							<i class="menu-icon fa fa-home"></i>
 							<span class="menu-text"> Inicio </span>
 						</a>
 
@@ -389,7 +394,7 @@
 					</li>
 
 					<li class="active open">
-						<a href="#" class="dropdown-toggle">
+						<a href="index.jsp" class="dropdown-toggle">
 							<i class="menu-icon fa fa-book"></i>
 							<span class="menu-text"> Gestionar libros </span>
 
@@ -400,7 +405,7 @@
 
 						<ul class="submenu">
 							<li class="active">
-								<a href="index.jsp">
+								<a href="listarLibros.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Lista de libros
 								</a>
@@ -444,15 +449,15 @@
 
 			<div class="main-content">
 				<div class="main-content-inner">
-					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
+<!--					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
 							<li>
 								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="#">Inicio</a>
+								<a href="index.jsp">Inicio</a>
 							</li>
 
 							
-						</ul><!-- /.breadcrumb -->
+						</ul> /.breadcrumb 
 
 						<div class="nav-search" id="nav-search">
 							<form class="form-search">
@@ -461,8 +466,8 @@
 									<i class="ace-icon fa fa-search nav-search-icon"></i>
 								</span>
 							</form>
-						</div><!-- /.nav-search -->
-					</div>
+						</div> /.nav-search 
+					</div>-->
 
 					<div class="page-content">
 						<div class="ace-settings-container" id="ace-settings-container">
@@ -481,7 +486,7 @@
 												<option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
 											</select>
 										</div>
-										<span>&nbsp; Choose Skin</span>
+										<span>&nbsp; Seleccione Skin</span>
 									</div>
 
 									<div class="ace-settings-item">
@@ -537,108 +542,126 @@
 								Gestionar los libros
 								<small>
 									<i class="ace-icon fa fa-angle-double-right"></i>
-                                                                Registrar Categoria
+                                                                Registrar Libro
 								</small>
-                                                               							</h1>
+							</h1>
 						</div><!-- /.page-header -->
-
-						<div class="row">
-							<div class="col-xs-12">
-								<!-- PAGE CONTENT BEGINS -->
-								<!-- /.row -->
-
-								<div class="row">
-									<div class="col-xs-12">
-										<div class="table-header">
-											Resultados de libros registrados
-										</div>
-                                                                                
-                                                                            
-                                                                            
-                                                                                <!--  DISEÑO DE AYER                                                                      <div>
-                                                                                <form action="CategoriaController" method="post" class="form-horizontal">
-                                              
-                                                                                    <div class="form-group">
-                                                                                        <label class="col-sm-3 control-label no padding-right">
-                                                                                            Nombre:
-                                                                                        </label>
-                                                                                        <div class="col-sm-9">
-                                                                                            <input type="text" name="nombre" value="" placeholder="Escriba la categoria"/>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <button class="btn btn-success" type="submit">
-                                                                                        <i class="fa fa-save"></i>
-                                                                                        Registrar
-                                                                                    </button>
-                                                                                    <div>
-                                                                                    <%--=(request.getAttribute("mensaje")!=null?request.getAttribute("mensaje"):"")--%>
-                                                                                    </div>
-                                                                                
-                                                                                </form>
-                                                                                
-                                                                                
-                                                                                
-                                                                            </div>
-									
-								
-
-
-										</div><!-- /.modal-content
-									</div><!-- /.modal-dialog
-								</div>
-                                                                -->            
-                                                                            
-
-                                                                            <div>
-                                                                                <form action="CategoriaController" method="post" class="form-horizontal">
-                                                                             
-                                                                                    <br>
-                                                                                    <br>
-                                                                                    
-                                                                                    <div class="form-group">
-                                                                                        <label class="col-sm-3 control-label no-paddding-right">
-                                                                                            Nombre:
-                                                                                        </label>
-                                                                                        <div class="col-sm-3">
-                                                                                            <input type="text" name="nombre" value="" placeholder="Nombre de la Categoría"/>
-                                                                                        </div> 
-                                                                                    </div>
-                                                    
-                                                                                    <br>
-                                                                                    <div class="col-sm-3">
-                                                                                    <div class="col-sm-3"></div>
-                                                                                    
-                                                                                    <button class="btn btn-success" type="submit" value="Registrar">
-                                                                                        <i class="fa fa-save"></i>
-                                                                                        Registrar  
-                                                                                    </button>
-                                                                                    
-                                                                                    </div>
-                                                                                    <div class="col-sm-3">
-                                                                                    <div class="col-sm-3">
-
-                                                                                </form>     
-                                                                        </div>
-                                                                    </div><!-- /.modal-content -->
-								</div><!-- /.modal-dialog -->
-                                                            </div>
+                                                
+                                                <div class="table-header">
+                                                    Puede añadir desde aquí un nuevo Libro
+						</div>
+                                                
+                                                <div>
+                                                    <br>
+                                                    <form action="LibroController" method="post" class="form-horizontal">
+                                                        <br>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label no-paddding-right">
+                                                                ISBN:
+                                                            </label>
+                                                            <div class="col-sm-9">
+                                                                <input type="text" name="isbn" value="" placeholder="ISBN"/>
+                                                            </div> 
+                                                        </div>
+                                                        
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label no-paddding-right">
+                                                                Título del Libro:
+                                                            </label>
+                                                            <div class="col-sm-3">
+                                                                <input type="text" name="titulo" value="" placeholder="Título del Libro"/>
+                                                            </div> 
+                                                        </div>
+                                                        
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label no-paddding-right">
+                                                                Autor:
+                                                            </label>
+                                                            <div class="col-sm-3">
+                                                                <input type="text" name="autor" value="" placeholder="Autor del libro"/>
+                                                            </div> 
+                                                        </div>
+                                                        
+                                                        <!--publicacion es cuando se publico el libro, la fecha_registro 
+                                                        datetime es cuando este  libro ingreso en nuestro sistema, 
+                                                        el sistema se encarga de ello automáticamente-->
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label no-paddding-right">
+                                                                Fecha de publicación:
+                                                            </label>
+                                                            <div class="col-sm-3">
+                                                                <input type="text" name="publicacion" value="" placeholder="2018-12-21"/>
+                                                            </div> 
+                                                        </div>
+                                                        
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label no-paddding-right">
+                                                                Categoría Temática:
+                                                            </label>
+                                                            <div class="col-sm-3">
+                                                                <select name="categoria">
+                                                                    <option value="0">Seleccione Categoria</option>
+                                                                    <% for(Categoria c:CategoriaDAO.listar()){ %>
+                                                                    <option value="<%= c.getCodigo()%>"><%= c.getNombre()%></option>
+                                                                    <%}%>
+                                                                </select>
+                                                            </div> 
+                                                        </div>
+                                                        
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label no-paddding-right">
+                                                                Editorial:
+                                                            </label>
+                                                            <div class="col-sm-3">
+                                                                <select name="editorial">
+                                                                    <option value="0">Seleccione la Editorial</option>
+                                                                    <% for(Editorial e:EditorialDAO.listar()){ %>
+                                                                    <option value="<%= e.getNit()%>"><%= e.getNombre() %></option>
+                                                                    <%}%>
+                                                                </select>
+                                                            </div> 
+                                                        </div>
+                                                                
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label no-paddding-right">
+                                                                Descripción del Libro:
+                                                            </label>
+                                                            <div class="col-sm-9">
+                                                                <textarea 
+                                                                    name="descripcion" rows="4" cols="43">
+                                                                </textarea>
+                                                            </div> 
+                                                        </div>
+                                                        
+                                                        <br>
+                                                        
                                                         <div class="col-sm-3"></div>
+                                                        <button name="Registrar" class="btn btn-success" type="submit" value="Registrar">
+                                                            <i class="fa fa-save"></i>
+                                                            Registrar
+                                                        </button>
+                                                        <button name="Actualizar" class="btn btn-warning" type="submit" value="Actualizar">
+                                                            <i class="fa fa-edit"></i>
+                                                            Actualizar
+                                                        </button>
+                                                        <button name="Eliminar" class="btn btn-danger" type="submit" value="Eliminar">
+                                                            <i class="fa fa-remove"></i>
+                                                            Eliminar
+                                                        </button>
                                                         
-                                                        <!-- AQUI NUESTRA EXPRESION (SE PUEDE PONER DONDE SE QUIERA) -->
+                                                        <br>
+                                                        
+                                                        <div class="col-sm-3">
+                                                        </form>
+                                                              
+                                                        </div>
                                                         <%=(request.getAttribute("mensaje")!=null?request.getAttribute("mensaje"):"")%>
-
+                                                        </div>
                                                         
-                                                        
-                                                        
-                                                        
-                                                        
-                                                        <!-- PAGE CONTENT ENDS -->
-							</div><!-- /.col -->
-						</div><!-- /.row -->
-					</div><!-- /.page-content -->
-				</div>
-			</div><!-- /.main-content -->
-
+                                            </div><!-- /.page-content -->
+                                        </div>
+                                    </div><!-- /.main-content -->
+                                        
 			<div class="footer">
 				<div class="footer-inner">
 					<div class="footer-content">
@@ -656,9 +679,9 @@
 								<i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
 							</a>
 
-							<a href="#">
+<!--							<a href="#">
 								<i class="ace-icon fa fa-rss-square orange bigger-150"></i>
-							</a>
+							</a>-->
 						</span>
 					</div>
 				</div>
@@ -935,4 +958,3 @@
 		</script>
 	</body>
 </html>
-

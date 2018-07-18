@@ -17,12 +17,12 @@ import models.Categoria;
  * @author jlGoldaracena
  */
 public class CategoriaDAO {
-    public static boolean registrar(Categoria cat){
+    public static boolean registrar(Categoria c){
         try {
             String SQL="INSERT INTO categorias(nombre) values(?);";
             Connection con = Conexion.conectar();
             PreparedStatement st = con.prepareStatement(SQL);
-            st.setString(1, cat.getNombre());
+            st.setString(1, c.getNombre());
             if(st.executeUpdate()>0) {
                 return true;
         }else{
@@ -40,7 +40,7 @@ public class CategoriaDAO {
             Connection con = Conexion.conectar();
             PreparedStatement st = con.prepareStatement(SQL);
             ResultSet resultado = st.executeQuery();
-            ArrayList<Categoria> lista = null;
+            ArrayList<Categoria> lista = new ArrayList<>();
             Categoria cat;
             while(resultado.next()){
                 cat = new Categoria();

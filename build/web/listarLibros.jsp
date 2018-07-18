@@ -409,7 +409,7 @@
 							</li>
 
 							<li class="">
-								<a href="#">
+								<a href="registroLibro.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Registrar Libro
 								</a>
@@ -417,8 +417,7 @@
 								<b class="arrow"></b>
 							</li>
                                                         <li class="">
-								<a href="r
-                                                                  #">
+								<a href="registroEditorial.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Registrar Editorial
 								</a>
