@@ -381,7 +381,7 @@
 				<ul class="nav nav-list">
 					<li class="">
 						<a href="index.jsp">
-							<i class="menu-icon fa fa-tachometer"></i>
+							<i class="menu-icon fa fa-home"></i>
 							<span class="menu-text"> Inicio </span>
 						</a>
 
@@ -402,7 +402,7 @@
 							<li class="active">
 								<a href="index.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Lista de libros
+									Lista de Libros
 								</a>
 
 								<b class="arrow"></b>
@@ -534,7 +534,7 @@
 
 						<div class="page-header">
 							<h1>
-								Gestionar los libros
+								Gestionar los Libros
 								<small>
 									<i class="ace-icon fa fa-angle-double-right"></i>
                                                                 Registrar Categoria

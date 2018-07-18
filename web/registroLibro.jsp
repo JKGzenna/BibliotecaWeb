@@ -407,7 +407,7 @@
 							<li class="active">
 								<a href="listarLibros.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Lista de libros
+									Lista de Libros
 								</a>
 
 								<b class="arrow"></b>
@@ -539,7 +539,7 @@
 
 						<div class="page-header">
 							<h1>
-								Gestionar los libros
+								Gestionar los Libros
 								<small>
 									<i class="ace-icon fa fa-angle-double-right"></i>
                                                                 Registrar Libro
