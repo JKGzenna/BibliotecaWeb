@@ -58,5 +58,23 @@ public class EditorialDAO {
             return null;
         }
     }
+    
+        public static String getEditorial(String nit){
+        try {
+            String SQL = "SELECT nombre FROM editoriales WHERE nit=?";
+            Connection con = Conexion.conectar();
+            PreparedStatement st = con.prepareStatement (SQL); 
+            st.setString(1, nit);
+            ResultSet resultado = st.executeQuery();
+           
+            if (resultado.next()){
+               return resultado.getString("nombre");
+            }
+            return "--";
+
+        } catch (SQLException ex) {
+            return "--";
+        }
+    }
 
 }

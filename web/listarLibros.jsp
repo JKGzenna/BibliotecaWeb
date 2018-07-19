@@ -4,6 +4,10 @@
     Author     : Juan Luis Goldaracena
 --%>
 
+<%@page import="dao.CategoriaDAO"%>
+<%@page import="dao.EditorialDAO"%>
+<%@page import="dao.LibroDAO"%>
+<%@page import="models.Libro"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -12,7 +16,7 @@
 		<meta charset="utf-8" />
 		<title>Gestión de libros</title>
 
-		<meta name="description" content="Juan Luis Goldaracena- TecaSoft" />
+		<meta name="description" content="Juan Luis Goldaracena - TecaSoft" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
                 <%@include file="css.jsp" %>
@@ -40,23 +44,23 @@
 					</a>
 				</div>
 
-<!--				<div class="navbar-buttons navbar-header pull-right" role="navigation">
+				<div class="navbar-buttons navbar-header pull-right" role="navigation">
 					<ul class="nav ace-nav">
 						<li class="grey dropdown-modal">
-							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+<!--							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 								<i class="ace-icon fa fa-tasks"></i>
 								<span class="badge badge-grey">4</span>
-							</a>
+							</a>-->
 
 							<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
-								<li class="dropdown-header">
+<!--								<li class="dropdown-header">
 									<i class="ace-icon fa fa-check"></i>
 									4 Tasks to complete
-								</li>
+								</li>-->
 
 								<li class="dropdown-content">
 									<ul class="dropdown-menu dropdown-navbar">
-										<li>
+<!--										<li>
 											<a href="#">
 												<div class="clearfix">
 													<span class="pull-left">Software Update</span>
@@ -106,27 +110,27 @@
 													<div style="width:90%" class="progress-bar progress-bar-success"></div>
 												</div>
 											</a>
-										</li>
+										</li>-->
 									</ul>
 								</li>
 
 								<li class="dropdown-footer">
-									<a href="#">
+<!--									<a href="#">
 										See tasks with details
 										<i class="ace-icon fa fa-arrow-right"></i>
-									</a>
+									</a>-->
 								</li>
 							</ul>
 						</li>
 
 						<li class="purple dropdown-modal">
-							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+<!--							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 								<i class="ace-icon fa fa-bell icon-animated-bell"></i>
 								<span class="badge badge-important">8</span>
-							</a>
+							</a>-->
 
 							<ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
-								<li class="dropdown-header">
+<!--								<li class="dropdown-header">
 									<i class="ace-icon fa fa-exclamation-triangle"></i>
 									8 Notifications
 								</li>
@@ -183,25 +187,25 @@
 										See all notifications
 										<i class="ace-icon fa fa-arrow-right"></i>
 									</a>
-								</li>
+								</li>-->
 							</ul>
 						</li>
 
-						<li class="green dropdown-modal">
+<!--						<li class="green dropdown-modal">
 							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 								<i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
 								<span class="badge badge-success">5</span>
-							</a>
+							</a>-->
 
 							<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
-								<li class="dropdown-header">
+<!--								<li class="dropdown-header">
 									<i class="ace-icon fa fa-envelope-o"></i>
 									5 Messages
-								</li>
+								</li>-->
 
-								<li class="dropdown-content">
+<!--								<li class="dropdown-content">-->
 									<ul class="dropdown-menu dropdown-navbar">
-										<li>
+<!--										<li>
 											<a href="#" class="clearfix">
 												<img src="assets/images/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
 												<span class="msg-body">
@@ -284,24 +288,24 @@
 													</span>
 												</span>
 											</a>
-										</li>
+										</li>-->
 									</ul>
-								</li>
+<!--								</li>
 
 								<li class="dropdown-footer">
 									<a href="inbox.html">
 										Ver todos los mensajes
 										<i class="ace-icon fa fa-arrow-right"></i>
-									</a>
-								</li>
+									</a>-->
+<!--								</li>-->
 							</ul>
-						</li>
+<!--						</li>-->
 
-						<li class="light-blue dropdown-modal">
+<!--						<li class="light-blue dropdown-modal">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="assets/images/avatars/user.jpg" alt="Jason's Photo" />
+								<img class="nav-user-photo" src="assets/images/avatars/user.jpg" alt="foto usuario" />
 								<span class="user-info">
-									<small>Bienvenido,</small>
+									<small>Bienvenido</small>
 									Juan Luis
 								</span>
 
@@ -317,7 +321,7 @@
 								</li>
 
 								<li>
-									<a href="profile.html">
+									<a href="#">profile.jsp
 										<i class="ace-icon fa fa-user"></i>
 										Perfil
 									</a>
@@ -332,9 +336,9 @@
 									</a>
 								</li>
 							</ul>
-						</li>
+						</li>-->
 					</ul>
-				</div>-->
+				</div>
 			</div><!-- /.navbar-container -->
 		</div>
 
@@ -379,10 +383,11 @@
 				</div> /.sidebar-shortcuts -->
 
 				<ul class="nav nav-list">
+                                    
 					<li class="">
 						<a href="index.jsp">
 							<i class="menu-icon fa fa-home"></i>
-							<span class="menu-text"> Inicio</span>
+							<span class="menu-text"> Inicio </span>
 						</a>
 
 						<b class="arrow"></b>
@@ -400,9 +405,9 @@
 
 						<ul class="submenu">
 							<li class="active">
-								<a href="index.jsp">
+								<a href="listarLibros.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Listado de Libros
+									Lista de libros
 								</a>
 
 								<b class="arrow"></b>
@@ -419,7 +424,7 @@
                                                         <li class="">
 								<a href="registroEditorial.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Registrar Editorial
+									Registrar Editoriales
 								</a>
 
 								<b class="arrow"></b>
@@ -427,7 +432,7 @@
                                                         <li class="">
 								<a href="registroCategoria.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Registrar Categoría
+									Registrar Categorías
 								</a>
 
 								<b class="arrow"></b>
@@ -448,7 +453,7 @@
 						<ul class="breadcrumb">
 							<li>
 								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="#">Inicio</a>
+								<a href="index.jsp">Inicio</a>
 							</li>
 
 							
@@ -534,10 +539,10 @@
 
 						<div class="page-header">
 							<h1>
-								Gestionar los Libros
+								Gestionar los libros
 								<small>
 									<i class="ace-icon fa fa-angle-double-right"></i>
-                                                                Lista de Libros
+                                                                Listado de libros
 								</small>
 							</h1>
 						</div><!-- /.page-header -->
@@ -557,57 +562,46 @@
 
 										<!-- div.dataTables_borderWrap -->
 										<div>
-											<table id="dynamic-table" class="table table-striped table-bordered table-hover">
-												<thead>
-													<tr>
-														<th>ISBN</th>
-														<th>Titulo</th>
-														<th class="hidden-480">Autor</th>
+                                                                                    <table id="dynamic-table" class="table table-striped table-bordered table-hover">
+											<thead>
+                                                                                            <tr>
+												<th>ISBN</th>
+												<th>Titulo del Libro</th>
+												<th class="hidden-480">Autor</th>
+												<th><i class="ace-icon fa fa-calendar-o bigger-110 hidden-480"></i>Fecha de Publicación</th>
+                                                                                                <th>Editorial</th>
+												<th class="hidden-480">Categoría</th>
+												<th></th>
+                                                                                            </tr>
+											</thead>
 
-														<th>
-															<i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
-															Fecha
-														</th>
-                                                                                                                <th>
-															
-															Editorial
-														</th>
-														<th class="hidden-480">Categoría</th>
+											<tbody>
+                                                                                            
+                                                                                            <%for(Libro l:LibroDAO.listar()){%>
+                                                                                            <tr>
+                                                                                                    
+                                                                                                <td><%= l.getIsbn() %> </td>
+												<td class="hidden-480"><%= l.getTitulo()%></td>
+												<td><%= l.getNombre_autor()%></td>
+                                                                                                <td><%= l.getPublicacion()%></td>
+                                                                                                <td><span class="label label-sm label-success"><%= EditorialDAO.getEditorial(l.getNit_editorial())%></span></td>
+                                                                                                <td><span class="label label-sm label-success"><%= CategoriaDAO.getCategoria(l.getCodigo_categoria())%></span></td>
 
-														<th></th>
-													</tr>
-												</thead>
-
-												<tbody>
-													<tr>
-
-														<td>
-														<a href="#">1254-3256-9856-652</a>
-														</td>
-														<td class="hidden-480">Introducción a desarrollo web con JSP</td>
-														<td>Juan Luis Goldaracena</td>
-
-														<td>2018-04-01</td>
-                                                                                                                <td><span class="label label-sm label-success">Planeta</span></td>
-                                                                                                                <td>
-															<span class="label label-sm label-success">Informática</span>
-														</td>
-
-														<td>
+                                                                                                <td>
 															<div class="hidden-sm hidden-xs action-buttons">
-																<a class="blue" href="#">
+<!--																<a class="blue" href="#">
 																	<i class="ace-icon fa fa-search-plus bigger-130"></i>
-																</a>
+																</a>-->
 
-																<a class="green" href="#">
+																<a class="green" href="registroLibro.jsp">
 																	<i class="ace-icon fa fa-pencil bigger-130"></i>
 																</a>
 
-																<a class="red" href="#">
+																<a class="red" href="registroLibro.jsp">
 																	<i class="ace-icon fa fa-trash-o bigger-130"></i>
 																</a>
 															</div>
-
+                                                                                                                        <!--
 															<div class="hidden-md hidden-lg">
 																<div class="inline pos-rel">
 																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
@@ -641,15 +635,15 @@
 																	</ul>
 																</div>
 															</div>
-														</td>
+														</td>-->
+                                                                                                            
 													</tr>
-
-													
-													</tbody>
+                                                                                                        <%}%>
+                                                                                                    </tbody>
 												</table>
 											</div>
 
-											<div class="modal-footer no-margin-top">
+<!--											<div class="modal-footer no-margin-top">
 												<button class="btn btn-sm btn-danger pull-left" data-dismiss="modal">
 													<i class="ace-icon fa fa-times"></i>
 													Cerrar
@@ -680,7 +674,7 @@
 														</a>
 													</li>
 												</ul>
-											</div>
+											</div>-->
 										</div><!-- /.modal-content -->
 									</div><!-- /.modal-dialog -->
 								</div>
@@ -709,9 +703,9 @@
 								<i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
 							</a>
 
-							<a href="#">
+<!--							<a href="#">
 								<i class="ace-icon fa fa-rss-square orange bigger-150"></i>
-							</a>
+							</a>-->
 						</span>
 					</div>
 				</div>
