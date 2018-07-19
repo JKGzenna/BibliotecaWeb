@@ -40,7 +40,7 @@
 					</a>
 				</div>
 
-				<div class="navbar-buttons navbar-header pull-right" role="navigation">
+<!--				<div class="navbar-buttons navbar-header pull-right" role="navigation">
 					<ul class="nav ace-nav">
 						<li class="grey dropdown-modal">
 							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -334,7 +334,7 @@
 							</ul>
 						</li>
 					</ul>
-				</div>
+				</div>-->
 			</div><!-- /.navbar-container -->
 		</div>
 
@@ -551,7 +551,7 @@
 								<div class="row">
 									<div class="col-xs-12">
 										<div class="table-header">
-											Resultados de libros registrados
+											Puede añadir desde aquí una nueva Categoría
 										</div>
                                                                                 
                                                                             

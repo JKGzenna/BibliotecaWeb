@@ -41,23 +41,23 @@
 					</a>
 				</div>
 
-				<div class="navbar-buttons navbar-header pull-right" role="navigation">
+<!--				<div class="navbar-buttons navbar-header pull-right" role="navigation">
 					<ul class="nav ace-nav">
 						<li class="grey dropdown-modal">
-<!--							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 								<i class="ace-icon fa fa-tasks"></i>
 								<span class="badge badge-grey">4</span>
-							</a>-->
+							</a>
 
 							<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
-<!--								<li class="dropdown-header">
+								<li class="dropdown-header">
 									<i class="ace-icon fa fa-check"></i>
 									4 Tasks to complete
-								</li>-->
+								</li>
 
 								<li class="dropdown-content">
 									<ul class="dropdown-menu dropdown-navbar">
-<!--										<li>
+										<li>
 											<a href="#">
 												<div class="clearfix">
 													<span class="pull-left">Software Update</span>
@@ -107,27 +107,27 @@
 													<div style="width:90%" class="progress-bar progress-bar-success"></div>
 												</div>
 											</a>
-										</li>-->
+										</li>
 									</ul>
 								</li>
 
 								<li class="dropdown-footer">
-<!--									<a href="#">
+									<a href="#">
 										See tasks with details
 										<i class="ace-icon fa fa-arrow-right"></i>
-									</a>-->
+									</a>
 								</li>
 							</ul>
 						</li>
 
 						<li class="purple dropdown-modal">
-<!--							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 								<i class="ace-icon fa fa-bell icon-animated-bell"></i>
 								<span class="badge badge-important">8</span>
-							</a>-->
+							</a>
 
 							<ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
-<!--								<li class="dropdown-header">
+								<li class="dropdown-header">
 									<i class="ace-icon fa fa-exclamation-triangle"></i>
 									8 Notifications
 								</li>
@@ -184,25 +184,25 @@
 										See all notifications
 										<i class="ace-icon fa fa-arrow-right"></i>
 									</a>
-								</li>-->
+								</li>
 							</ul>
 						</li>
 
-<!--						<li class="green dropdown-modal">
+						<li class="green dropdown-modal">
 							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 								<i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
 								<span class="badge badge-success">5</span>
-							</a>-->
+							</a>
 
 							<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
-<!--								<li class="dropdown-header">
+								<li class="dropdown-header">
 									<i class="ace-icon fa fa-envelope-o"></i>
 									5 Messages
-								</li>-->
+								</li>
 
-<!--								<li class="dropdown-content">-->
+								<li class="dropdown-content">
 									<ul class="dropdown-menu dropdown-navbar">
-<!--										<li>
+										<li>
 											<a href="#" class="clearfix">
 												<img src="assets/images/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
 												<span class="msg-body">
@@ -285,18 +285,18 @@
 													</span>
 												</span>
 											</a>
-										</li>-->
+										</li>
 									</ul>
-<!--								</li>
+								</li>
 
 								<li class="dropdown-footer">
 									<a href="inbox.html">
 										Ver todos los mensajes
 										<i class="ace-icon fa fa-arrow-right"></i>
-									</a>-->
-<!--								</li>-->
+									</a>
+								</li>
 							</ul>
-<!--						</li>-->
+						</li>
 
 						<li class="light-blue dropdown-modal">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
@@ -318,7 +318,7 @@
 								</li>
 
 								<li>
-									<a href="#"><!--profile.jsp-->
+									<a href="#">profile.jsp
 										<i class="ace-icon fa fa-user"></i>
 										Perfil
 									</a>
@@ -335,7 +335,7 @@
 							</ul>
 						</li>
 					</ul>
-				</div>
+				</div>-->
 			</div><!-- /.navbar-container -->
 		</div>
 
