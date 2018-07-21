@@ -548,7 +548,7 @@
 						</div><!-- /.page-header -->
                                                 
                                                 <div class="table-header">
-                                                    Puede añadir desde aquí un nuevo Libro
+                                                    Desde aquí puede añadir, editar o eliminar un Libro
 						</div>
                                                 
                                                 <div>

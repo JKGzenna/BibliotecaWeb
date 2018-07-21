@@ -85,10 +85,26 @@ public class EditorialController extends HttpServlet {
         e.setEmail (email);
         e.setSitioweb (sitioweb);
         
-        if(EditorialDAO.registrar(e)){
-            request.setAttribute("mensaje", "La Editorial ha sido registrada");
+        if (request.getParameter("Registrar")!= null){
+            if(EditorialDAO.registrar(e)){
+                request.setAttribute("mensaje","La Editorial se ha registrado correctamente");
+            }else{
+                request.setAttribute("mensaje","No se ha podido registrar la Editorial");
+            }
+        }else if (request.getParameter("Actualizar")!= null){
+            if (EditorialDAO.actualizar(e)){
+                request.setAttribute("mensaje","Se ha actualizado la Editorial correctamente");
+            }else{
+                request.setAttribute("mensaje","Los datos de la Editorial no se han podido actualizar");
+            }
+        }else if (request.getParameter("Eliminar")!= null){
+            if (EditorialDAO.eliminar(e)){
+                request.setAttribute("mensaje", "Se ha eliminado la Editorial");
+            }else{
+                request.setAttribute("mensaje", "No se ha podido eliminar la Editorial");
+            }
         }else{
-            request.setAttribute("mensaje", "La Editorial no ha sido registrada");
+            request.setAttribute("mensaje", "Acción desconocida");
         }
         request.getRequestDispatcher("registroEditorial.jsp").forward(request, response);
     }

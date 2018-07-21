@@ -85,7 +85,7 @@ public class LibroDAO {
         }
     }
     
-        public static ArrayList<Libro> listar(){
+    public static ArrayList<Libro> listar(){
         try {
             String SQL = "SELECT * FROM libros;";
             Connection con = Conexion.conectar();

@@ -543,12 +543,22 @@
 						</div><!-- /.page-header -->
                                                 
                                                 <div class="table-header">
-                                                    Puede añadir desde aquí una nueva Editorial
+                                                    Desde aquí puede añadir, editar o eliminar una Editorial
 						</div>
                                                 
                                                 <div>
                                                     <br><br>
                                                     <form action="EditorialController" method="post" class="form-horizontal">
+                                                        
+                                                                                                     
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label no-paddding-right">
+                                                                Nombre:
+                                                            </label>
+                                                            <div class="col-sm-3">
+                                                                <input type="text" name="nombre" value="" placeholder="Nombre de la Editorial"/>
+                                                            </div> 
+                                                        </div>
                                                         
                                                         <div class="form-group">
                                                             <label class="col-sm-3 control-label no-paddding-right">
@@ -558,16 +568,7 @@
                                                                 <input type="text" name="nit" value="" placeholder="Nit de la Editorial"/>
                                                             </div> 
                                                         </div>
-                                             
-                                                        <div class="form-group">
-                                                            <label class="col-sm-3 control-label no-paddding-right">
-                                                                Nombre:
-                                                            </label>
-                                                            <div class="col-sm-3">
-                                                                <input type="text" name="nombre" value="" placeholder="Nombre de la Editorial"/>
-                                                            </div> 
-                                                        </div>
-                                                  
+
                                                         <div class="form-group">
                                                             <label class="col-sm-3 control-label no-paddding-right">
                                                                 Teléfono:
@@ -605,26 +606,28 @@
                                                         </div>
                                                         
                                                         <br>
-                                                        <div class="col-sm-3">
-                                                        <div class="col-sm-3"></div>
-                                                            <button class="btn btn-success" type="submit" value="Registrar">
-                                                                <i class="fa fa-save"></i>
-                                                                Registrar  
-                                                            </button>
-                                                        </div>
-                                                        <div class="col-sm-3">
-                                                        <div class="col-sm-3">
-                                                            
-                                                    </form> 
-                                                    <br>
+                             
+                                                        <div class="col-sm-2"></div>
+                                                        <button name="Registrar" class="btn btn-success" type="submit" value="Registrar">
+                                                            <i class="fa fa-save"></i>
+                                                            Registrar
+                                                        </button>
+                                                        <button name="Actualizar" class="btn btn-warning" type="submit" value="Actualizar">
+                                                            <i class="fa fa-edit"></i>
+                                                            Actualizar
+                                                        </button>
+                                                        <button name="Eliminar" class="btn btn-danger" type="submit" value="Eliminar">
+                                                            <i class="fa fa-remove"></i>
+                                                            Eliminar
+                                                        </button>
+                                                            <%=(request.getAttribute("mensaje")!=null?request.getAttribute("mensaje"):"")%>
+                                                    
+                                                    </form>
                                                 </div>
                                                 </div><!-- /.page-content -->
                                                 </div>
                                         </div><!-- /.main-content -->
                                         
-                        <!-- ENTRE EL MAIN Y EL FOOTER AQUI NUESTRA EXPRESION (SE PUEDE PONER DONDE SE QUIERA) <if (request.getAttribute("mensaje") != null) { System.out.println("mensaje");}else{System.out.println("mensaje");}%> PERO EN FORMATO ABREVIADO -->         
-                        <%=(request.getAttribute("mensaje")!=null?request.getAttribute("mensaje"):"")%>
-                        
 			<div class="footer">
 				<div class="footer-inner">
 					<div class="footer-content">

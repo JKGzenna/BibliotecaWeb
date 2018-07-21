@@ -59,7 +59,7 @@ public class EditorialDAO {
         }
     }
     
-        public static String getEditorial(String nit){
+    public static String getEditorial(String nit){
         try {
             String SQL = "SELECT nombre FROM editoriales WHERE nit=?";
             Connection con = Conexion.conectar();
@@ -74,6 +74,54 @@ public class EditorialDAO {
 
         } catch (SQLException ex) {
             return "--";
+        }
+    }
+        
+        
+    public static boolean eliminar (Editorial edi){
+        try {
+            String SQL = "DELETE FROM editoriales WHERE nombre=?";
+            Connection con = Conexion.conectar();
+            PreparedStatement st = con.prepareStatement (SQL); 
+            st.setString(1, edi.getNombre());
+            if(st.executeUpdate()>0){
+                
+                return true;
+            }else{
+                return false;
+            }
+        } catch (SQLException ex) {
+            return false;
+        }
+    }
+     
+    public static boolean actualizar (Editorial edi){
+        try {
+            String SQL = "UPDATE editoriales SET" +
+                     "   nit=?," +
+                     "    telefono=?," +
+                     "    direccion=?," +
+                     "    email=?," +
+                     "    sitioweb=?" +
+                "    WHERE nombre=?";
+
+            Connection con = Conexion.conectar();
+            PreparedStatement st = con.prepareStatement (SQL); 
+            
+            st.setString(1, edi.getNit());
+            st.setString(2, edi.getTelefono());
+            st.setString(3, edi.getDireccion());
+            st.setString(4, edi.getEmail()); 
+            st.setString(5, edi.getSitioweb());
+            st.setString(6, edi.getNombre());
+            if(st.executeUpdate()>0){
+                
+                return true;
+            }else{
+                return false;
+            }
+        } catch (SQLException ex) {
+            return false;
         }
     }
 

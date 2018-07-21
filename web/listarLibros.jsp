@@ -407,7 +407,7 @@
 							<li class="active">
 								<a href="listarLibros.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Lista de libros
+									Lista de Libros
 								</a>
 
 								<b class="arrow"></b>
@@ -424,7 +424,7 @@
                                                         <li class="">
 								<a href="registroEditorial.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Registrar Editoriales
+									Registrar Editorial
 								</a>
 
 								<b class="arrow"></b>
@@ -432,7 +432,7 @@
                                                         <li class="">
 								<a href="registroCategoria.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Registrar Categorías
+									Registrar Categoría
 								</a>
 
 								<b class="arrow"></b>

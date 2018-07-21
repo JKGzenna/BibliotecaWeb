@@ -551,88 +551,43 @@
 								<div class="row">
 									<div class="col-xs-12">
 										<div class="table-header">
-											Puede añadir desde aquí una nueva Categoría
+											Desde aquí puede añadir o eliminar una Categoría
 										</div>
                                                                                 
                                                                             
-                                                                            
-                                                                                <!--  DISEÑO DE AYER                                                                      <div>
-                                                                                <form action="CategoriaController" method="post" class="form-horizontal">
-                                              
-                                                                                    <div class="form-group">
-                                                                                        <label class="col-sm-3 control-label no padding-right">
-                                                                                            Nombre:
-                                                                                        </label>
-                                                                                        <div class="col-sm-9">
-                                                                                            <input type="text" name="nombre" value="" placeholder="Escriba la categoria"/>
+                                                                                <div>
+                                                                                    <form action="CategoriaController" method="post" class="form-horizontal">
+                                                                                        <br>
+                                                                                        <br>
+                                                                                        <div class="form-group">
+                                                                                            <label class="col-sm-3 control-label no-paddding-right">
+                                                                                                Nombre:
+                                                                                            </label>
+                                                                                            <div class="col-sm-3">
+                                                                                                <input type="text" name="nombre" value="" placeholder="Nombre de la Categoría"/>
+                                                                                            </div> 
                                                                                         </div>
-                                                                                    </div>
-                                                                                    <button class="btn btn-success" type="submit">
-                                                                                        <i class="fa fa-save"></i>
-                                                                                        Registrar
-                                                                                    </button>
-                                                                                    <div>
-                                                                                    <%--=(request.getAttribute("mensaje")!=null?request.getAttribute("mensaje"):"")--%>
-                                                                                    </div>
-                                                                                
-                                                                                </form>
-                                                                                
-                                                                                
-                                                                                
-                                                                            </div>
-									
-								
-
-
-										</div><!-- /.modal-content
-									</div><!-- /.modal-dialog
-								</div>
-                                                                -->            
-                                                                            
-
-                                                                            <div>
-                                                                                <form action="CategoriaController" method="post" class="form-horizontal">
-                                                                             
-                                                                                    <br>
-                                                                                    <br>
-                                                                                    
-                                                                                    <div class="form-group">
-                                                                                        <label class="col-sm-3 control-label no-paddding-right">
-                                                                                            Nombre:
-                                                                                        </label>
+                                                                                        <br>
                                                                                         <div class="col-sm-3">
-                                                                                            <input type="text" name="nombre" value="" placeholder="Nombre de la Categoría"/>
-                                                                                        </div> 
-                                                                                    </div>
-                                                    
-                                                                                    <br>
-                                                                                    <div class="col-sm-3">
-                                                                                    <div class="col-sm-3"></div>
-                                                                                    
-                                                                                    <button class="btn btn-success" type="submit" value="Registrar">
-                                                                                        <i class="fa fa-save"></i>
-                                                                                        Registrar  
-                                                                                    </button>
-                                                                                    
-                                                                                    </div>
-                                                                                    <div class="col-sm-3">
-                                                                                    <div class="col-sm-3">
-
-                                                                                </form>     
-                                                                        </div>
-                                                                    </div><!-- /.modal-content -->
+                                                                                            <button name="Registrar" class="btn btn-success" type="submit" value="Registrar">
+                                                                                                <i class="fa fa-save"></i>
+                                                                                                Registrar  
+                                                                                            </button>
+                                                                                            <button name="Eliminar" class="btn btn-danger" type="submit" value="Eliminar">
+                                                                                                <i class="fa fa-remove"></i>
+                                                                                                Eliminar
+                                                                                            </button>
+                                                                                        </div>
+                                                                                    </form> 
+                                                                                <br>
+                                                                                <!-- AQUI NUESTRA EXPRESION (SE PUEDE PONER DONDE SE QUIERA) -->
+                                                                                <%=(request.getAttribute("mensaje")!=null?request.getAttribute("mensaje"):"")%>
+                                                                                </div>
+                                                                        </div><!-- /.modal-content -->
 								</div><!-- /.modal-dialog -->
-                                                            </div>
-                                                        <div class="col-sm-3"></div>
-                                                        
-                                                        <!-- AQUI NUESTRA EXPRESION (SE PUEDE PONER DONDE SE QUIERA) -->
-                                                        <%=(request.getAttribute("mensaje")!=null?request.getAttribute("mensaje"):"")%>
+                                                        </div>
 
-                                                        
-                                                        
-                                                        
-                                                        
-                                                        
+                                                                                
                                                         <!-- PAGE CONTENT ENDS -->
 							</div><!-- /.col -->
 						</div><!-- /.row -->

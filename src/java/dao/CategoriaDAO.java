@@ -29,7 +29,7 @@ public class CategoriaDAO {
         }
         
     }
-        public static ArrayList<Categoria> listar(){
+    public static ArrayList<Categoria> listar(){
         try {
             String SQL="SELECT * FROM categorias";
             Connection con = Conexion.conectar();
@@ -53,7 +53,7 @@ public class CategoriaDAO {
         
     }
         
-            public static String getCategoria(int cod){
+    public static String getCategoria(int cod){
         try {
             String SQL = "SELECT nombre FROM categorias WHERE codigo=?";
             Connection con = Conexion.conectar();
@@ -68,6 +68,23 @@ public class CategoriaDAO {
 
         } catch (SQLException ex) {
             return "--";
+        }
+    }
+        
+    public static boolean eliminar (Categoria cat){
+        try {
+            String SQL = "DELETE FROM categorias WHERE nombre=?";
+            Connection con = Conexion.conectar();
+            PreparedStatement st = con.prepareStatement (SQL); 
+            st.setString(1, cat.getNombre());
+            if(st.executeUpdate()>0){
+                
+                return true;
+            }else{
+                return false;
+            }
+        } catch (SQLException ex) {
+            return false;
         }
     }
 }

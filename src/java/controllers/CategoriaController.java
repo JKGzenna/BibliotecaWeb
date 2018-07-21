@@ -72,10 +72,20 @@ public class CategoriaController extends HttpServlet {
         String nombre = request.getParameter("nombre");
         Categoria c = new Categoria();
         c.setNombre(nombre);
-        if(CategoriaDAO.registrar(c)){
-            request.setAttribute("mensaje", "La categoría se ha registrado correctamente");
+        if (request.getParameter("Registrar")!= null){
+            if(CategoriaDAO.registrar(c)){
+                request.setAttribute("mensaje","La Categoria se ha registrado correctamente");
+            }else{
+                request.setAttribute("mensaje","No se ha podido registrar la categoria");
+            }
+        }else if (request.getParameter("Eliminar")!= null){
+            if (CategoriaDAO.eliminar(c)){
+                request.setAttribute("mensaje", "Se ha eliminado la Categoria");
+            }else{
+                request.setAttribute("mensaje", "No se ha podido eliminar la Categoria");
+            }
         }else{
-            request.setAttribute("mensaje", "La categoría no ha sido registrada");
+            request.setAttribute("mensaje", "Acción desconocida");
         }
         request.getRequestDispatcher("registroCategoria.jsp").forward(request, response);
         
@@ -92,3 +102,4 @@ public class CategoriaController extends HttpServlet {
     }// </editor-fold>
 
 }
+
