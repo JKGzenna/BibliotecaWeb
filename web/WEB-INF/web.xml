@@ -8,7 +8,7 @@
         <servlet-name>EditorialController</servlet-name>
         <servlet-class>controllers.EditorialController</servlet-class>
     </servlet>
-        <servlet>
+    <servlet>
         <servlet-name>LibroController</servlet-name>
         <servlet-class>controllers.LibroController</servlet-class>
     </servlet>

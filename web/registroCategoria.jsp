@@ -122,14 +122,11 @@
 
 			<div class="main-content">
 				<div class="main-content-inner">
-
-
 					<div class="page-content">
 						<div class="ace-settings-container" id="ace-settings-container">
 							<div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
 								<i class="ace-icon fa fa-cog bigger-130"></i>
 							</div>
-
 							<div class="ace-settings-box clearfix" id="ace-settings-box">
 								<div class="pull-left width-50">
 									<div class="ace-settings-item">
@@ -193,65 +190,55 @@
 						</div><!-- /.ace-settings-container -->
 
 						<div class="page-header">
-							<h1>
-								Gestionar los Libros
-								<small>
-									<i class="ace-icon fa fa-angle-double-right"></i>
-                                                                Registrar Categoria
-								</small>
-                                                               							</h1>
-						</div><!-- /.page-header -->
-
+                                                    <h1>
+                                                    Gestionar los Libros
+                                                        <small>
+                                                            <i class="ace-icon fa fa-angle-double-right"></i>
+                                                            Registrar Categoria
+                                                        </small>           							
+                                                    </h1>
+						</div>
 						<div class="row">
-							<div class="col-xs-12">
-								<!-- PAGE CONTENT BEGINS -->
-								<!-- /.row -->
-
-								<div class="row">
-									<div class="col-xs-12">
-										<div class="table-header">
-											Desde aquí puede añadir o eliminar una Categoría
-										</div>
-                                                                                
-                                                                            
-                                                                                <div>
-                                                                                    <form action="CategoriaController" method="post" class="form-horizontal">
-                                                                                        <br>
-                                                                                        <br>
-                                                                                        <div class="form-group">
-                                                                                            <label class="col-sm-3 control-label no-paddding-right">
-                                                                                                Nombre:
-                                                                                            </label>
-                                                                                            <div class="col-sm-3">
-                                                                                                <input type="text" name="nombre" value="" placeholder="Nombre de la Categoría"/>
-                                                                                            </div> 
-                                                                                        </div>
-                                                                                        <br>
-                                                                                        <div class="col-sm-3">
-                                                                                            <button name="Registrar" class="btn btn-success" type="submit" value="Registrar">
-                                                                                                <i class="fa fa-save"></i>
-                                                                                                Registrar  
-                                                                                            </button>
-                                                                                            <button name="Eliminar" class="btn btn-danger" type="submit" value="Eliminar">
-                                                                                                <i class="fa fa-remove"></i>
-                                                                                                Eliminar
-                                                                                            </button>
-                                                                                        </div>
-                                                                                    </form> 
-                                                                                <br>
-                                                                                <!-- AQUI NUESTRA EXPRESION (SE PUEDE PONER DONDE SE QUIERA) -->
-                                                                                <%=(request.getAttribute("mensaje")!=null?request.getAttribute("mensaje"):"")%>
-                                                                                </div>
-                                                                        </div><!-- /.modal-content -->
-								</div><!-- /.modal-dialog -->
+                                                    <div class="col-xs-12">
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+								<div class="table-header">
+								Desde aquí puede añadir o eliminar una Categoría
+								</div>
+                                                                <div>
+                                                                    <form action="CategoriaController" method="post" class="form-horizontal">
+                                                                    <br>
+                                                                    <br>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-3 control-label no-paddding-right">
+                                                                        Nombre:
+                                                                        </label>
+                                                                        <div class="col-sm-3">
+                                                                            <input type="text" name="nombre" value="" placeholder="Nombre de la Categoría"/>
+                                                                        </div>
+                                                                    </div>
+                                                                    <br>
+                                                                    <div class="col-sm-3">
+                                                                        <button name="Registrar" class="btn btn-success" type="submit" value="Registrar">
+                                                                            <i class="fa fa-save"></i>
+                                                                            Registrar  
+                                                                        </button>
+                                                                        <button name="Eliminar" class="btn btn-danger" type="submit" value="Eliminar">
+                                                                            <i class="fa fa-remove"></i>
+                                                                            Eliminar
+                                                                        </button>
+                                                                    </div>
+                                                                    </form> 
+                                                                    <br>
+                                                                    <!-- AQUI NUESTRA EXPRESION (SE PUEDE PONER DONDE SE QUIERA) -->
+                                                                    <%=(request.getAttribute("mensaje")!=null?request.getAttribute("mensaje"):"")%>
+                                                                </div>
+                                                            </div>
                                                         </div>
-
-                                                                                
-                                                        <!-- PAGE CONTENT ENDS -->
-							</div><!-- /.col -->
-						</div><!-- /.row -->
-					</div><!-- /.page-content -->
-				</div>
+                                                    </div>
+						</div>
+                                        </div>
+                                </div>
 			</div><!-- /.main-content -->
 
 			<div class="footer">

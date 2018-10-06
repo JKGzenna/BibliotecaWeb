@@ -227,9 +227,9 @@
 
 								<div class="row">
 									<div class="col-xs-12">
-										<div class="table-header">
+<!--										<div class="table-header">
 											Listado de libros registrados
-										</div>
+										</div>-->
 
 										<!-- div.table-responsive -->
 
@@ -240,11 +240,11 @@
                                                                                             <tr>
 												<th>ISBN</th>
 												<th>Titulo del Libro</th>
-												<th class="hidden-480">Autor</th>
-												<th><i class="ace-icon fa fa-calendar-o bigger-110 hidden-480"></i>Fecha de Publicación</th>
+												<th>Autor</th>
+												<th><i class="ace-icon fa fa-calendar-o"></i> Fecha de Publicación</th>
                                                                                                 <th>Editorial</th>
-												<th class="hidden-480">Categoría</th>
-												<th></th>
+												<th>Categoría</th>
+												<th>Editar</th>
                                                                                             </tr>
 											</thead>
 
@@ -254,7 +254,7 @@
                                                                                             <tr>
                                                                                                     
                                                                                                 <td><%= l.getIsbn() %> </td>
-												<td class="hidden-480"><%= l.getTitulo()%></td>
+												<td><%= l.getTitulo()%></td>
 												<td><%= l.getNombre_autor()%></td>
                                                                                                 <td><%= l.getPublicacion()%></td>
                                                                                                 <td><span class="label label-sm label-success"><%= EditorialDAO.getEditorial(l.getNit_editorial())%></span></td>
@@ -283,9 +283,6 @@
                                                                             </div><!-- /.modal-content -->
 									</div><!-- /.modal-dialog -->
                                                                     </div>
-
-								<!-- PAGE CONTENT ENDS -->
-							</div><!-- /.col -->
 						</div><!-- /.row -->
 					</div><!-- /.page-content -->
 				</div>
